@@ -1,0 +1,388 @@
+
+
+
+
+
+
+ 
+
+Kubernates link :- Here's the link to the Kubernetes API tutorial: https://kubernetes.io/docs/tutorials/kubernetes-basics/
+
+
+Linux commands 
+
+module load idea/2019.2
+module load maven/3.6.1
+module load python/2.7-addons-gitreview
+module load jdk/1.8.0_202
+module load python/2.7.9
+module load python/3.6.6
+module load bcompare/4.2.4
+module load vscode/1.38.0
+module unload openjdk
+
+nano ~/.modules 
+
+touch ~/.modules 
+
+cat .modules 
+
+
+31-01-2020 
+
+1) Kubernates idea what it is ??? 
+
+
+ 
+ 
+ 
+ 
+
+			  
+
+	 
+Intellij shortcuts 
+
+1) Alt + F7 ----> Find usages 
+2) Ctrl + Shift + N ------> Open a file 
+3) 
+  
+
+ 
+  git commands
+  git commits 
+  0) mvn formatter::format
+  1. git add . 
+  2) git commit   OR  steps 1 and 2 as git commit -a --amend    or git commit -a --amend
+  3) :wq! 
+  4) git review -D 
+  5) after publish use this git review 
+  6) git 
+  master
+  7) git rebase --continuegit 
+  8) git status ---> to check git status 
+  9) git push origin HEAD:refs/drafts/master
+  10)git push origin HEAD:refs/for/master  -----> without drafts 
+  11)git reset filename ex:- git reset src/main/resources/features/examples/HelloWorld.feature
+  12) regate - to run jenkins job again -- gerrit 
+  
+      Steps for commit for draft 
+  1. git add . 	  
+  2) git commit -a --amend
+  3) commit description 
+  4) :wq! 
+  2) git push origin HEAD:refs/drafts/master
+  
+     Steps for second commit for draft 
+  1) git add .
+  2) git commit --amend --no-edit  
+  3) git review -D 
+  
+  
+   Commands for checkout specfic draft 
+   
+   git review -d 6884532  
+   git review -d 7053404 
+   
+   04-02-2020  Target 100 unix commands or linux commands 
+  
+  Links 
+  1) https://www.howtogeek.com/412055/37-important-linux-commands-you-should-know/
+  2) 
+  
+   1) 1. alias
+The alias command lets you give your own name to a command or sequence of commands. You can then type your short name, and the shell will execute the command or sequence of commands for you.
+
+alias cls=clear
+
+
+  syntax :- alias cls = clear 
+  
+  2) ps -- list the process ids,names ,time and cmd etc 
+  
+     syntax :- ps 
+  3) touch - to create a file 
+
+    syntax :- touch note.txt 
+
+ 4) cat - to read the file 
+
+   syntax :- cat note.txt 
+ 5) vi note.txt   ----------> to write content to the file 
+ 
+ 6) less command used to display the content readable using "cat" command 
+ 
+ syntax :- cat note.txt | less 
+ 
+ 7) cd ~   -----> To Return to home directory .... 
+ 
+ 8) nohup firefox sample.html  
+ 
+ 9) move command 
+ 
+      How to move single file into a directory
+  
+      Syntax :- mv file1.txt file.2.txt file3.txt folder 
+	            mv  ~/.bashrc   /lab/pccc_builds/ec_ci/ramstuff  
+				
+	 How to move multiple files into a directory 
+	   
+	 Syntax :- mv ~/.netrc ~/.git-completion.bash  ~/.gitconfig  /lab/pccc_builds/ec_ci/ramstuff 
+	 
+	 Syntax :- mv /lab/pccc_builds/ec_ci/ramstuff/.bashrc ~/.bashrc.user 
+	 
+	 Syntax :- mv /lab/pccc_builds/ec_ci/ramstuff/.gitconfig  ~/.gitconfig 
+	 
+	 Syntax :- mv /lab/pccc_builds/ec_ci/ramstuff/.gitconfig  ~/.gitconfig 
+	 
+	 Syntax :- mv /lab/pccc_builds/ec_ci/ramstuff/.git-completion.bash  ~/.git-completion.bash 
+	 
+	 Syntax :- mv ~/.modules  /lab/pccc_builds/ec_ci/ramstuff
+	 
+	 Syntax :- mv /lab/pccc_builds/ec_ci/ramstuff/.modules  ~/.modules 
+	 
+	 cp -r /home/zyerpar/202002/20200220150804/* /lab/pccc_builds/ec_ci/ramstuff
+
+	 
+	 
+	 
+ 10) Open Intellij in Linux 
+
+     go to bin folder 
+
+    Syntax :-   ./idea.sh 
+
+11) killall java -9   -------------> to all java process like Intellij and Jars etc in Linux ........
+
+killall java -9 
+
+12) gedit log1.log ............> to write content to this file ...
+
+13) chmod 777 -R /home/zyerpar/202002/ 
+
+
+14) cp -r /home/zyerpar/202002/20200220132500/* /lab/pccc_builds/ec_ci/copy/ 
+
+15) chmod 777  -R /lab/pccc_builds/ec_ci/ramstuff/report 
+
+16) copy command to copy files from one directory to another directory 
+
+  cp -r /home/zyerpar/202002/20200220150804/* /lab/pccc_builds/ec_ci/ramstuff/report
+  cp  ~/git/e-jcat-configs/pcccpod047-1/* /lab/pccc_builds/ec_ci/stat_configs/pcccpod047-1  
+  
+  cp  /home/zyerpar/git/e-jcat/src/main/resources/resolveMipcImagePaths 
+  
+  
+    Live files to be copied 
+	
+       cp  /lab/pccc_builds/images/SGSN-MME/MME_1.36-T-120820/kvm/vdp_sgsn-mme_qcow2_cxp9025898_4r97c14/*.qcow2 /home/zyerpar/git/e-jcat/src/main/resources/resolveMipcImagePaths/ 
+	   cp  /lab/pccc_builds/images/EPG/EPG_2.10_T-117446/vdp_epg_qcow2_cxp9026845_27r11b39/*.qcow2               /home/zyerpar/git/e-jcat/src/main/resources/resolveMipcImagePaths/
+	   cp  /lab/pccc_builds/images/SAPC/SAPC_1.9.0_T-120870/vdp_sapc_qcow2_cxp9032849_7r10a10/*.qcow2            /home/zyerpar/git/e-jcat/src/main/resources/resolveMipcImagePaths/	
+
+
+    cp axis2*.jar /destination/directory
+17) remove files from directory 
+
+  syntax :- rm -rf * 
+ 
+   syntax 2 :- rm -v /home/vivek/data/* ex:-  rm -v /lab/pccc_builds/ec_ci/ramstuff/report/*  
+
+  syntax :- rm -r directoryname 
+  
+
+18) Make zip file in unix 
+
+
+  syntax :- zip logfromstringreport.zip /home/zyerpar/202002/20200224114146/ -r
+            zip logs.zip /home/zyerpar/202003/20200304095637 -r 
+			
+ 19) chmod 
+
+    Giving permissions to access the files 
+
+    chmod 777 logs.zip 
+    chmod 777 mylogs.zip 
+20)  open visual code in unix or linux 
+
+   syntax :-  code deployment.yaml -------> it opens in deployment.yaml file in visual code editor 
+              code /home/zyerpar/git/e-jcat-configs/pcccpod047-1/auto_conf.yml
+			  code /home/zyerpar/git/e-jcat-configs/pcccpod047-1/deployment.yaml 
+			  
+   
+ 21 kill mozilla process in unix or linux 
+ 
+   rm ~/.mozilla/firefox/*.default/{.parentlock,lock} 
+ 
+ 22) Unzip a file 
+ syntax :-  unzip filename 
+ 
+ 
+ 23)Open Chrome in  Linux 
+ 
+ Syntax :- google-chrome & 
+ 
+ 
+ 24) untar the tar file
+ 
+  dir1 :- /home/zyerpar/jdktar
+  dir 2 :-  /home/zyerpar/Downloads/jbr-11_0_3-linux-x64-b304.10.tar.gz
+   
+   mv /home/zyerpar/Downloads/jbr-11_0_3-linux-x64-b304.10.tar.gz  /home/zyerpar/jdktar 
+   
+    command :- tar xvzf jbr-11_0_3-linux-x64-b304.10.tar.gz  
+	
+25) find subdirectory 
+  
+   syntax :- find . -name "foo*"	
+  
+  05-02-2020 
+
+  Booking of FT node and configuration of CLI 
+
+ To easier use evrtd, put this alias in your ~/.bashrc: 
+
+alias evrtd='/proj/epg/tools/bin/evrtd' 
+
+If you set the alias, you can book a node by the command line or from a GUI. 
+
+To run the GUI, run “evrtd gui”. Here you can book and managed your booked clusters. 
+
+To book fro  m command line, run “evrtd request -e eccd”. This will book an FT node for 8 hours. The booking procedure takes a few minutes, have patience. 
+
+printer :- https://hiq365.sharepoint.com/:w:/r/teams/kontorgbg/_layouts/15/Doc.aspx?sourcedoc=%7BCD19EA0B-1014-415E-A6E6-BBD2EE917768%7D&file=PULL%20PRINT%20SETUP.docx&action=default&mobileredirect=true  
+
+
+Regular expression link :-   https://regexr.com/ 
+
+07-02-2020 
+ 
+https://www.momondo.se/  ---------> Flight Tickets 
+ 
+
+git review -d 6884532 
+git review -d 7094149
+
+20-02-2020 
+   
+git review -d 7053404
+
+ 1) How HashMap Internally Works 
+ 2) Diff between jdbc and jndi 
+ 3) diff btween Synchronized and Concurrent 
+ 4) Reflection API 
+ 5) Lazy and Early Loading in JPA 
+ 6) How to Pass JSON Object 
+ 7) How to use indexes in database 
+ 8) diff spring and springboot
+ 9) scopes in spring 
+ 10) diff btwn singleton and default scope 
+ 11) use of restful webservices 
+ 12) Java 8 features
+ 13) Streams in java 8 features 
+ 
+ 
+ 
+ 
+ 
+ 
+ Angular 
+ 
+ 1) use of ng-content tag in angular ? 
+ https://medium.com/@joshblf/wtf-is-ng-content-8382b2a664e1
+ 2) what is the use of ng-template ?
+ https://www.freecodecamp.org/news/everything-you-need-to-know-about-ng-template-ng-content-ng-container-and-ngtemplateoutlet-4b7b51223691/ 
+ 
+ Java 8 
+
+1) Consumers in Java8 ?
+Ans) In Java8, Consumer is a functional interface ,it takes an arguments and returns nothing. 
+
+Ex:- 
+
+  @FunctionalInterface 
+  public interface Consumer<T>{
+  
+     public void accept(T t);
+  }
+  
+package com.ericsson.pcc.integration.fw.logging;
+
+import java.util.function.Consumer;
+
+public class Java8Consumer2 {
+
+    public static void main(String[] args) {
+        Consumer<Integer> print =x-> System.out.println("Consumer Integer is"+ x);
+        print.accept(1);
+        Consumer<Boolean> printBoolean =x-> System.out.println("Consumer Boolean is"+ x);
+        printBoolean.accept(true);
+    }
+}
+
+  
+  
+  
+ 2) Supplier and Consumer in java 8 
+ 
+   Supplier is a functional interface and it has one method which is get() 
+   
+   Supplier<T> supplier = ()-> {
+   
+     return new Person("name",30,"Gotheberg");
+   
+   }
+  
+   https://dzone.com/articles/supplier-and-consumer-interface-in-java8 
+ 
+ 
+ 3) ExecutorService 
+ 
+  
+   
+ 4) Predicates 
+ 
+    https://howtodoinjava.com/java8/how-to-use-predicate-in-java-8/ 
+ 
+   Predicate is a functional interface it evalutes whether its true or not .
+   
+   It accept one method and use Lambda expression to check whether it it true or false .
+   
+   
+ 
+ 
+ 5) Optional 
+ 
+  Java Optional is a final class.
+ 
+  1) https://www.geeksforgeeks.org/java-8-optional-class/ 
+  2) 
+ 
+ 6) 
+ 
+ Jenkins 
+
+Jenkins Path :- /workspace/zyerpar/jenkins 
+username :- admin 
+password :- bac2c124c2b74df2a765d2e0ca70898b
+https://www.linuxtechi.com/install-configure-jenkins-on-centos-7-rhel-7/ 
+
+Time interval to run Jenkins Job for every 2 hours :- 0 */2 * * *
+every 10 minutes :- */10 * * * *
+every 10 seconds :- */10 * * * 
+
+ Maven with testng with Jenkins :- https://medium.com/@anusha.sharma3010/build-a-simple-maven-project-in-jenkins-da7a2a4ae202 
+ 
+ 1) Maven Porject with testng and build the job :- https://examples.javacodegeeks.com/enterprise-java/testng/testng-maven-project-example/ 
+ 2) Install Cobertura or Jacoco code coverage  Plugin and run the job again .
+ 3) Get the code coverage of the project 
+ 4) Get the Sonar Plugin for code review reports 
+ 5) How to Write Jenkins Pipleline scripts 
+ 6) Write Jenkins Pipleline script for our Project ...
+ 7) 
+ 
+ https://github.com/Romeh/spring-boot-sample-app/blob/master/Jenkinsfile 
+ 
+ Java 11 link :-   https://www.journaldev.com/24601/java-11-features 
+
+
+	
