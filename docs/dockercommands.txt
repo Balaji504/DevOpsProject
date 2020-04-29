@@ -1,0 +1,35 @@
+Docker Interview Questions Link :- https://www.guru99.com/docker-interview-questions.html
+Command	         Description
+docker info	     Information Command  ex:- docker info 
+docker pull	     Download an image   ex :- docker pull tomcat  --> Here tomcat is image name
+docker stats	 Container information  ex :- it gives container information
+docker images	 List of images downloaded  it gives the list of docker images 
+systemctl start docker ---> start docker 
+systemctl stop docker ----> stop docker 
+
+create docker image 
+
+command :- sudo docker image build -t ramy1430/java.devops1430:latest .
+
+description :- ramy1430  -- is my own docker hub docker id 
+java.devops1430 :- its a docker repository that you should create before create docker image 
+
+Push docker image which is created to docker repo 
+
+Command :- sudo docker push ramy1430/telenor-product:latest
+What is the method for creating a Docker container?
+
+You can use any of the specific Docker images for creating a Docker container using the below command.
+
+docker run -t -i command name ex :- docker run -t -i --name samplecontainer -d ramy1430/java.devops1430:latest
+
+ramy1430/java.devops1430:latest  -- image name
+
+Check Docker Containers 
+
+command :- sudo docker ps ---> check the list of containers running or not 
+
+How to Login Container 
+
+command :- docker container exec -it samplecontainer /bin/sh  --not working need to check this
+
