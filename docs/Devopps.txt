@@ -513,7 +513,8 @@ tags {
 
                 https://www.middlewareinventory.com/blog/packer-aws-terraform-example/ 
 
-                				
+                Firewall security to ubuntu server :- https://linuxconfig.org/how-to-configure-firewall-in-ubuntu-18-04
+				
 				   
 				
 			
