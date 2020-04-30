@@ -516,7 +516,26 @@ tags {
                 Firewall security to ubuntu server :- https://linuxconfig.org/how-to-configure-firewall-in-ubuntu-18-04
 				
 				   
+				snap-053f10fe5aa7629ab
 				
+				how-to-disable-ufw-ubuntu-externally
+				
+				I found a solution to the problem. I have explained them in the below points..
+
+I logged into my console and stopped the current instance
+Then went to the volumes section and detached my volume that was associated with the present instance.
+Then launched a new instance.
+then attached the volume of the previous instance to the new instance
+then logged into the new instance using ssh.
+used lsblk command to see that block devices attached to my instance. In my case there was two i.e. the one created along with the new instance and it was the root and the next was my previous instances volume which was still not mounted.
+then I mounted the previous volume into the instance by using the command sudo mount /dev/xvdf1 /mnt -t ext4 (Here i used xvdf1 because my data was present in that)
+then went to /mnt/etc/ufw/ufw.conf and changed enabled=yes to enabled=no
+saved the file and logged out
+again visited AWS console volume section and detached the previous volume and attached it to the stopped previous instance selecting exact previous instance and path as /dev/sda1
+went to instances tab and started the old instance.
+Now logged into the instance and it worked like a gem and all the files were intact.
+
+
 			
 			 
 			 
