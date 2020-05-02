@@ -234,6 +234,9 @@ killall java -9
 25) find subdirectory 
   
    syntax :- find . -name "foo*"	
+26) du -a /etc/ | sort -n -r | head -n 10  will list top 10 directories eating disk space in /etc/
+27) du -sh ./*/  to list out total memory for each subfolder in current path.
+28) ls -lart  to list out hidden folder also, normally jenkin installation is placed in .jenkins/ folder   
   
   05-02-2020 
 
