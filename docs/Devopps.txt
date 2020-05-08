@@ -535,18 +535,116 @@ again visited AWS console volume section and detached the previous volume and at
 went to instances tab and started the old instance.
 Now logged into the instance and it worked like a gem and all the files were intact.
 
+Jenkins shell commands in tracrat
 
-			
-			 
-			 
-			 
-			 
-
-
-
-
+echo "removing dist content"
+sudo rm -rf /var/www/html/*
+echo "copying dist content"
+sudo cp  /var/lib/jenkins/workspace/gotracrat-webapp-test/dist/*  /var/www/html/
+cd /var/www/html/
 
 			 
+
+https://www.youtube.com/watch?v=JbQbwum196g  SSL 
+
+https://www.youtube.com/watch?v=zxEgB_fIpCE SSL
+ 
+
+gotracrat gotracrat.in 
+
+
+
+Godaddy Details:
+
+
+mailId:
+
+-------
+
+parasuramyerramsetty@gmail.com
+
+
+username:parasuramyerramsetty
+
+pwd: Parasuramyerramsetty123.
+
+Customer Pin: 0587
+
+
+			 
+				 Domian Name      Record Name                                         Record Type                 Record Value 
+				 gotracrat.in     _284f53e1bd112a285654e25ff8863398.gotracrat.in      CNAME                      _f9c0101e2d7fb16b216660a2eb386aca.auiqqraehs.acm-validations.aws 
+				 
+				 
+
+				 *.gotracrat.in   _284f53e1bd112a285654e25ff8863398.gotracrat.in 
+				 
+				 
+				 
+				 https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-centos-7  - ssl in centos 
+				 
+				 https://www.tecmint.com/change-root-directory-of-apache-web-server/ -- apache config directory centos 
+				 
+				 centos - jenkins node js 
+				 
+				 ubuntu - backend java and nodejs
+
+				 angular install  nginx -- 
+				 
+				 
+				 
+				 
+				 new servers 
+				 
+				  centos - jenkins node js   -- No Changes 
+				  
+				  ubuntu - backend java  +  New Changes  nodejs install and nginx config and SSL + Faster Performance of application 
+				  
+				  SSH Ubuntu 
+				  
+				  
+				  sudo cp  /var/lib/jenkins/workspace/gotracrat-webapp-test/dist/*  /var/www/html/
+cd /var/www/html/
+				  
+				  
+				  
+				   
+				 New AWS Account For Developement 
+				  
+				 Developement or test enviroment 
+				 
+				 domain name :- test.gotracrat.in 
+				 
+				 requirments :- ubuntu instance free tier - t2-micro 
+				 install nodejs and nginx 
+				 
+				 database - new database 
+				 
+				 
+				 
+				 docker 
+				 
+				 kubernates 
+				 
+				 terraform 
+				 
+				 
+				 Check DNS Domain for website :-  http://whois.domaintools.com/gotracrat.in
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
 				 
 				 
 				 
