@@ -1,8 +1,8 @@
 provider "aws" {
 profile    = "default"
-region     = "us-east-2c"
+region     = "us-east-2"
 access_key = "XXX"
-secret_key = "XXX"
+secret_key = "XXXX"
 }
 
 
@@ -10,5 +10,9 @@ secret_key = "XXX"
 resource "aws_instance" "example" {
   ami  = "XXX"
   instance_type = "t2.micro"
-}
+  key_name = "XXX"
+  tags = {
+      Name = "XXX"
+   }
+ }
 

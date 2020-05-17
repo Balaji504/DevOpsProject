@@ -554,31 +554,10 @@ gotracrat gotracrat.in
 
 
 
-Godaddy Details:
 
 
-mailId:
-
--------
-
-parasuramyerramsetty@gmail.com
 
 
-username:parasuramyerramsetty
-
-pwd: Parasuramyerramsetty123.
-
-Customer Pin: 0587
-
-
-			 
-				 Domian Name      Record Name                                         Record Type                 Record Value 
-				 gotracrat.in     _284f53e1bd112a285654e25ff8863398.gotracrat.in      CNAME                      _f9c0101e2d7fb16b216660a2eb386aca.auiqqraehs.acm-validations.aws 
-				 
-				 
-
-				 *.gotracrat.in   _284f53e1bd112a285654e25ff8863398.gotracrat.in 
-				 
 				 
 				 
 				 https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-centos-7  - ssl in centos 
@@ -603,13 +582,58 @@ Customer Pin: 0587
 				  SSH Ubuntu 
 				  
 				  
+				  changes :- 
+				  
+				 sudo mkdir -p /var/www/tracrat.com/html
+				 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/tracrat
+				 sudo ln -s /etc/nginx/sites-available/tracrat /etc/nginx/sites-enabled/ 
+				 
+				 /var/www/tracrat.com/html  ---> Virtual Hosting for tracrat. 
+				 
+				 restart nginx server 
+				 sudo service nginx restart 
+				 sudo service nginx reload
+
+				 XXXXXX - Ubuntu 
+				 
+				 XXXXXX - centos 
+				 
+				sudo scp -r dist/* root@XXXXXX:/var/www/tracrat.com/html/
+				  
+               dist-copy
+               
+               try_files $uri /index.html;
+              https://certbot.eff.org/lets-encrypt/ubuntuxenial-nginx
+              https://askubuntu.com/questions/1109982/e-could-not-get-lock-var-lib-dpkg-lock-frontend-open-11-resource-temporari 
+			  
+			  
+			  sudo apt auto-remove  --> to remove unneccesary data 
+			  prasanna effort 
+			  230 PM - 430 pm ist - 08 may -2.30 hours 
+			  230 PM - 5.00 pm ist - 09 may 3 hours 
+			  
+			  
+			  
+			  
+			   
+			   
+			  
+
+				  
 				  sudo cp  /var/lib/jenkins/workspace/gotracrat-webapp-test/dist/*  /var/www/html/
-cd /var/www/html/
+            cd /var/www/html/
 				  
 				  
 				  
-				   
+				   crreate 
 				 New AWS Account For Developement 
+				 
+				 IAM users 
+				 
+				 Username :- tracratdev
+				 Password :- 
+				 
+
 				  
 				 Developement or test enviroment 
 				 
@@ -632,26 +656,169 @@ cd /var/www/html/
 				 Check DNS Domain for website :-  http://whois.domaintools.com/gotracrat.in
 				 
 				 
+				  
+				 https://stackoverflow.com/questions/13976305/pool-empty-unable-to-fetch-a-connection-in-10-seconds
+				 
+				 https://github.com/cloudfoundry/uaa/issues/165 
+				 
+				 
+				 Tracrat Production issue connection pooling issue 
+				 {"timestamp":1588957669549,"status":500,"error":"Internal Server Error","exception":"org.springframework.jdbc.UncategorizedSQLException","message":"CallableStatementCallback; uncategorized SQLException for SQL []; SQL state [null]; error code [0]; [http-nio-8087-exec-3] Timeout: Pool empty. Unable to fetch a connection in 0 seconds, none available[size:150; busy:150; idle:0; lastwait:200].; nested exception is org.apache.tomcat.jdbc.pool.PoolExhaustedException: [http-nio-8087-exec-3] Timeout: Pool empty. Unable to fetch a connection in 0 seconds, none available[size:150; busy:150; idle:0; lastwait:200].
+				 ","path":"/api/item/advancedSearchItemsByUser/true/99B27614-A682-4BA3-B9CE-7E52CFA659D7"}
 				 
 				 
 				 
-				 
-				 
-				 
-				 
-				 
-				 
-				 
-				 
-				 
-				 
-				 
-				 
-				 
+spring.datasource.tomcat.initial-size=10
 
-			
+spring.datasource.tomcat.max-wait=30000
+
+spring.datasource.tomcat.max-active=150
+
+spring.datasource.tomcat.max-idle=100
+
+spring.datasource.tomcat.min-idle=10
+
+spring.datasource.tomcat.default-auto-commit=true  
+
+   https://medium.com/trabe/fitting-the-artifact-size-in-spring-boot-applications-2b1da22a709e 
+   
+   
+				 http://XXXXXX:8080/job/attribute-types-management/
+				 
+				 
+				 
+				 Check Jenkins Version in Linux 
+				 
+				 https://curiousviral.com/how-to-check-jenkins-version/ 
+				 
+				 cd  /var/lib/jenkins/ 
+				 
+				 cat config.xml 
+				 
+				 you can find in version tag 
+				 
+				 Jenkins 2.176.3 - Tracrat Current Jenkins Version 
+				 
+				 Download Jenkins New Version in Centos in one directory 
+				 
+				 command :-  wget http://updates.jenkins-ci.org/download/war/2.222.3/jenkins.war
+				 
+				 New Jenkins Version war copied here :-  /home/centos/new_jenkins
+ 
+                 Old Jenkins Version war copied here :- 
+				 
+				 cp /usr/lib/jenkins/jenkins.war /home/centos/
+				 
+				 https://www.unionen.se/
+				 
+				 Jenkins Upgrade 
+				 
+				 https://www.thegeekstuff.com/2016/06/upgrade-jenkins-and-plugins/
+				 
+				 ping gotracrat.com
+				 
+				 
+				 Ports for Dev Server in bound rules 
+				 
+				 1) 8087 
+				 2) 8054
+				 3) 8089
+				 4) 8085
+				 5) 8088 
+				 6) 8081 
+				 7) 443 - https 
+				 
+				 
+				 https://blog.e-zest.com/how-to-do-scp-from-one-ec2-instance-to-another-ec2-instance/
+				 
+				   sudo scp -r /home/ubuntu/cloud-services/*  ubuntu@52.15.255.51:/home/ubuntu/cloud_services/
+				   
+				   scp command 
+				   
+				   scp -i ~/home/ubuntu/tracrat-dev-pem/tracrat-dev.pem /home/ubuntu/cloud-services/*  ubuntu@52.15.255.51:/home/ubuntu/cloud_services/
+
+                   scp -i ~/Path-To-Key-File/AAA.gem /path/file  ec2-user@<Elastic IP>:/path/file
+
+				 
+				  
+                  ssh-keygen -R 54.72.242.0
+
+
+                  sudo chmod 600 ec2-key-pair.pem
+				  
+				  ssh -i ec2-key-pair.pem ec2-user@ec2-54-72-242-0.eu-west-1.compute.amazonaws.com
 			  
 			  
+			      sudo scp id_rsa.pub ubuntu@XXXXXX:/home/ubuntu
+
+
+
+               HTTPS code fixes in htmls of angular code 
+			   
+			   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  
+			   
+			   
+			   Java Side :- security.require-ssl=true
+			   
+			   https://medium.com/@rubenvermeulen/running-angular-cli-over-https-with-a-trusted-certificate-4a0d5f92747a 
+			   
+			   command to know jar jars in linux :- netstat -lntp 
+			   
+			   sudo rm -rf cd /home/ubuntu/cloud-services/distillary-backend/
+               sudo mkdir  /home/ubuntu/cloud-services/distillary-backend
+			   
+			   sudo curl https://gotracrat.com 
+			   
+			   
+			   apache2 server installed in centos and command to open conf file 
+			   
+			   syntax :- nano /etc/httpd/conf/httpd.conf 
+			   
+			   
+			   
+			   
+			   AWS API gateway,Lambda and Dynamo Db with Java link :- https://www.youtube.com/watch?v=TbCNVApI4lA&t=2s 
+			   
+			   
+                Terraform :- 
+				
+				1) we have created ec2 server using existing key pair values but when i connect through SSH im not able to connect why ? 
+				
+				
+				*/master 
+				
+				
+				Current Situation 
+				7 apps - */master 
+				
+				prod - dev app branches  - 7 apps  -- deployed to production ----
+				
+				
+				Actual Standards
+				master branch - main branch - Production Code - Deployment
+				dev branches - dev enviroment code - Deployment 
+				
+				Current  Environment
+				Master branch - main branch - Dev enviroment code - Deployment ---> Merge Dev Code to Master Branch Code
+				Dev branches - Production Code - Deployment - Successful 
+				
+				
+				Master and Dev Branch  Stable 
+				
+				
+				cd /home/ubuntu/cloud_services/api-gateway
+                sudo rm -rf location-management attribute-types-management  
+
+				
+				
+				
+				
+				
+				
+  
+				  
+			      
+			      
 			  
 		   
 		   
