@@ -582,6 +582,27 @@ gotracrat gotracrat.in
 				  SSH Ubuntu 
 				  
 				  
+				  Tracrat Dev Server  NgInx Server Configuration Changes 
+				  
+				  1) sudo mkdir -p /var/www/gotracrat.in/html ---> here dist folder content should be copied 
+				  2) sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/tracrat
+				  3) sudo ln -s /etc/nginx/sites-available/tracrat /etc/nginx/sites-enabled/ 
+				 
+				  /var/www/gotracrat.in/html  ---> Virtual Hosting for tracrat. 
+				  
+				  4) nginx server stop command 
+				      command :- sudo systemctl stop nginx
+					  
+			      5) nginx server start command 
+
+                    command :- sudo systemctl start nginx				  
+				  4) Restart nginx server 
+				  
+				   sudo service nginx restart 
+				   sudo service nginx reload 
+				 
+				 
+				  
 				  changes :- 
 				  
 				 sudo mkdir -p /var/www/tracrat.com/html
@@ -809,6 +830,13 @@ spring.datasource.tomcat.default-auto-commit=true
 				cd /home/ubuntu/cloud_services/api-gateway
                 sudo rm -rf location-management attribute-types-management  
 
+            Docker :- docker image ls
+			docker image rm -f 75835a67d134 2a4cca5ac898
+			
+			Terraform scripts github repo :- https://github.com/terraform-aws-modules/terraform-aws-security-group 
+			
+			
+			
 				
 				
 				
