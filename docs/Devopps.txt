@@ -4,9 +4,6 @@
  
  https://my.vmware.com/web/vmware/info?slug=desktop_end_user_computing/vmware_workstation_pro/12_0
 
-rajeshbala232@gmail.com
-Rajesh@32
-
 License Key :- UC3R8-A2X14-H80WP-Q5YET-QGAU8
 
 
@@ -81,15 +78,7 @@ Rajesh@32
 	       Timings :- 11 PM IST :- 7.30 PM CET 
 		              Devops ...
 					  
-	   
-		 AWS Account Details 
-		 
-		 email:- pulapa003@gmail.com
-         password :- Rajesh@32
-		 
-		 
-		 
-		 ubuntu 
+	    ubuntu 
 		 
 		 sudo apt-get update
 
@@ -347,13 +336,7 @@ nohup java -jar /home/ubuntu/cloud-services/distillary-backend/target/distillery
    
     Terraform :- https://www.middlewareinventory.com/blog/terraform-aws-example-ec2/
       in windwos :- https://www.terraform.io/downloads.html
-
-	   
-		AKIA3EQLPDSAL4R3LYMX --access key 
-
-   hVTXZVDRpDWL7N1GfqMD7lT3/vHQGb5K0GFFFKqa - secret key 
-
-    August 26th_55th Session 
+       August 26th_55th Session 
    
 	   Devopps in Telugu 
 	   
