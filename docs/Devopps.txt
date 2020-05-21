@@ -703,7 +703,7 @@ spring.datasource.tomcat.default-auto-commit=true
 				 
 				 Jenkins 2.176.3 - Tracrat Current Jenkins Version 
 				 
-				 Download Jenkins New Version in Centos in one directory 
+				 Download Jenkins New Version 2.222.3 in Centos in one directory 
 				 
 				 command :-  wget http://updates.jenkins-ci.org/download/war/2.222.3/jenkins.war
 				 
@@ -711,7 +711,22 @@ spring.datasource.tomcat.default-auto-commit=true
  
                  Old Jenkins Version war copied here :- 
 				 
-				 cp /usr/lib/jenkins/jenkins.war /home/centos/
+				 cp /usr/lib/jenkins/jenkins.war /home/centos/old_jenkins/jenkins.
+				 cp /usr/lib/jenkins/jenkins.war /home/centos/old_jenkins/jenkins.war
+				 
+				 cp /home/centos/new_jenkins/jenkins.war /usr/lib/jenkins
+				 
+				 cp /home/centos/jenkins_2.9/jenkins.war  /usr/lib/jenkins           just copied 
+				 
+				sudo systemctl stop jenkins
+
+                sudo systemctl start jenkins
+				 
+				sudo systemctl status jenkins
+				 
+				 
+				 
+				 
 				 
 				 https://www.unionen.se/
 				 
@@ -820,10 +835,24 @@ spring.datasource.tomcat.default-auto-commit=true
 			
 			
 			
+				ADD EBS to EC2 Instance :- https://devopscube.com/mount-ebs-volume-ec2-instance/ 
 				
+				SWAP file creation 
 				
-				
-				
+				This will create a swap file of 2GB
+sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo swapon --show
+sudo cp /etc/fstab /etc/fstab.bak
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+sudo sysctl vm.swappiness=10
+echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.conf
+sudo sysctl vm.vfs_cache_pressure=50
+echo 'vm.vfs_cache_pressure=50' | sudo tee -a /etc/sysctl.conf
+
+
 				
 				
   
