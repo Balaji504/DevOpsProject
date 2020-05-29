@@ -852,14 +852,114 @@ echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.conf
 sudo sysctl vm.vfs_cache_pressure=50
 echo 'vm.vfs_cache_pressure=50' | sudo tee -a /etc/sysctl.conf
 
+distillery-1.0.jar needs to be updated in Dockerfile 
 
 				
 				
   
 				  
 			      
-			      
+			  nginx and CERTBOT in Ubuntu 
 			  
+			  Steps :- 
+			  
+			  
+			    Tracrat Dev Server  NgInx Server Configuration Changes 
+				  
+				  1) sudo mkdir -p /var/www/gotracrat.in/html ---> here dist folder content should be copied 
+				  2) sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/tracrat
+				  3) sudo ln -s /etc/nginx/sites-available/tracrat /etc/nginx/sites-enabled/ 
+				 
+				  /var/www/gotracrat.in/html  ---> Virtual Hosting for tracrat. 
+				  
+				  4) nginx server stop command 
+				      command :- sudo systemctl stop nginx
+					  
+			      5) nginx server start command 
+
+                    command :- sudo systemctl start nginx				  
+				  4) Restart nginx server 
+				  
+				   sudo service nginx restart 
+				   sudo service nginx reload 
+				   
+				    nginx and CERTBOT in Ubuntu  
+					
+					add user in ubuntu 
+					
+					1) sudo adduser devuser
+					password :- devuser 
+					
+				 commands need to run for not to ask password for every login 
+				 2) sudo visudo
+				 
+				 edit file add this line 
+				 devuser ALL=(ALL:ALL) NOPASSWD:ALL
+				 
+				 3) login :- su devuser 
+				 
+				 4) Install Nginx :- sudo apt-get install nginx -y 
+				 
+				 5) nginx -v --> check version 
+				 
+				 6) sudo apt-get update 
+				 
+				 7) sudo apt-get upgrade 
+				 
+				 8) sudo mkdir -p /var/www/tandoorikitchen.se/html ---> Create new directory :- Here dist folder content should be copied .(-p -> parent directory creating parent directory)
+				 9) sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/tandoori
+				 10) check directory :- cd /etc/nginx/sites-available/ output :- tandoori file should be visible. Here tandoori is a file not a directory 
+				 11) edit nginx confile file i.e tandoori command :- sudo nano tandoori
+				 
+				  Changes required as below 
+				  
+				  server {
+				     listen 80 default_server;
+					 listen [::]:80 default_server;
+					 
+				  
+				  }
+				  TO 
+				  
+				  server {
+				     listen 80 ;
+					 listen [::]:80 ;
+					 }
+					 
+			     root /var/www/html/   WITH  /var/www/tandoorikitchen.se/html 
+				 
+				 server_name _;  replace with your domain which you pointing to ex:- server_name tandoorikitchen.se www.tandoorikitchen.se;
+                   				 
+                 12) sudo ln -s /etc/nginx/sites-available/tandoori /etc/nginx/sites-enabled/	--> To enable tandoori directory
+
+                 13) check nginx confile file :- sudo nginx -t 			 
+
+				 
+				 14) Remove nginx config file :- 
+				   sudo rm tandoori
+				 
+				 https://futurestud.io/tutorials/nginx-remove-an-app-domain-from-sites-enabled
+				 
+				 
+				 
+				 
+        1) mini qube 
+		2) kubectl 
+		3) helm charts 2 
+		
+		ubuntu - large 
+		
+		
+				 
+				 
+					
+					
+					
+					
+					
+					
+					
+					
 		   
 		   
 
