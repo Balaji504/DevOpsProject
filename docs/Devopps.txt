@@ -943,33 +943,167 @@ distillery-1.0.jar needs to be updated in Dockerfile
 				 
 				 
 				 
-        1) mini qube 
-		2) kubectl 
+        1) minikube :- https://www.youtube.com/watch?v=0rZcYXtbGpc.  it creates one node cluster 
+		2) kubectl :- its like aws cli its command line tool to access 
 		3) helm charts 2 
-		
+		4) kubernates architecture 
 		ubuntu - large 
 		
-		
+		5) Kubernates application :- https://www.youtube.com/watch?v=Vj6EFnav5Mg
 				 
 				 
+					pod is nothig but resoiurce or object to run containers .
+					
+					java review comments 
+					1) maven jip plugin convert class files into docker image 
+					https://medium.com/better-programming/build-push-to-docker-with-maven-eea7c4b8cfa2
+					2) read me file 
 					
 					
+					kubectl api :- https://v1-15.docs.kubernetes.io/docs/tasks/tools/install-kubectl/ 
+					
+					Install virtual box 
+					sudo apt install virtualbox 
+					
+					minikube
+					
+					minikube start --driver=docker    ----> To Start minikube 
+					minikube status
+					
+					kubectl config get-contexts 
 					
 					
+					TO switch between different clusters 
 					
+					kubectl config use-context my-cluster-name
 					
+					kubectl get pods -A ----> it lists the pods of kubernates meaning all components which are running as containers 
 					
-					
-		   
-		   
+					ex:- ubuntu@ip-172-31-19-55:~$ kubectl get pods -A
+NAMESPACE     NAME                               READY   STATUS    RESTARTS   AG                                                                                                             E
+kube-system   coredns-66bff467f8-hcx9g           1/1     Running   0          5m                                                                                                             41s
+kube-system   coredns-66bff467f8-jtjpn           1/1     Running   0          5m                                                                                                             41s
+kube-system   etcd-minikube                      1/1     Running   0          5m                                                                                                             46s
+kube-system   kube-apiserver-minikube            1/1     Running   0          5m                                                                                                             46s
+kube-system   kube-controller-manager-minikube   1/1     Running   0          5m                                                                                                             46s
+kube-system   kube-proxy-gp2nh                   1/1     Running   0          5m                                                                                                             41s
+kube-system   kube-scheduler-minikube            1/1     Running   0          5m                                                                                                             46s
+kube-system   storage-provisioner                1/1     Running   0          5m                                                                                                             55s
 
+					
+					kubectl get namespaces ---> get the existing namespaces 
+					
+					ex:- ubuntu@ip-172-31-19-55:~$ kubectl get namespaces
+NAME              STATUS   AGE
+default           Active   7m39s
+kube-node-lease   Active   7m40s
+kube-public       Active   7m40s
+kube-system       Active   7m40s
+
+					
+					kubectl cheatsheet link need to read 
+					
+					how to create namespaces 
+					
+					Kubernates Cheatsheat MUST READ 
+					https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+					
+					You can also use a shorthand alias for kubectl that also works with completion:
+
+alias k=kubectl
+complete -F __start_kubectl k 
+
+    kubectl config view                                  # show view file 
+	
+	kubectl config get-contexts                          # display list of contexts 
+	kubectl config current-context                       # display the current-context
+    ubuntu@ip-172-31-19-55:~$ kubectl config current-context
+    minikube
+   
+
+    kubectl config use-context my-cluster-name           # set the default context to my-cluster-name 
+	ex:- 
+	 ubuntu@ip-172-31-19-55:~$ kubectl config use-context minikube
+    Switched to context "minikube".
+    ubuntu@ip-172-31-19-55:~$
+	
+	
+					how to create namespaces in kubernates
+					
+					
+  what is helm charts in kubernates ?
+  https://www.youtube.com/watch?v=-ykwb1d0DXU
+  
+					
+					kubectl services need to learn and understand 
+					
+					kubectl get services -A 
+					
+					
+					
+		   how to deploy springboot application into kubernates using minikube
 		   
-				
+		   
+    EKS Master --> Cluster ---> 
+	
+	kubectl and helm ---> slave nodes ....
+	
+	 HELM Links 
+	 https://dzone.com/articles/create-install-upgrade-and-rollback-a-helm-chart-p
+	 https://docs.bitnami.com/tutorials/deploy-spring-boot-application-production-helm/
+	 https://www.baeldung.com/kubernetes-helm
+	 
+	 
+		Deploy Springboot using minikube Kubernates VERY VERY IMPORTANT :- https://www.youtube.com/watch?v=EZolJ4lNiYc 
+		2) Deploy Springboot with mysql and jpa using minikube Kubernates VERY VERY IMPORTANT https://www.youtube.com/watch?v=6OJgD_RygiM  github link :- https://github.com/shameed1910/springboot-k8s-mysql
+		8080:32291/TCP 
 		
+		cmd :- minikube ip 
+		output :- 172.17.0.2
+		
+		diff betwn kubectl get deployments VS kubectl get pods 
+		
+		
+		core dns manager in kubernates slave 
+		
+		 How do I expose Kubernetes services running on my Amazon EKS cluster?
+	     https://aws.amazon.com/premiumsupport/knowledge-center/eks-kubernetes-services-cluster/ 
 	   
 	   
+	     June 1 2020 
+		 
+		 Remove Nginx Server in Ubuntu :- https://askubuntu.com/questions/235347/what-is-the-best-way-to-uninstall-nginx 
+		 
 	   
-
+	   
+         Install NgInx Server in Ubuntu and Deploy Angular APP 
+		 
+		 https://www.youtube.com/watch?v=iPYgCYb2tZg&feature=youtu.be 
+		 
+		 1) sudo apt-get update 
+		 2) sudo apt-get install nginx
+		 3) systemctl status nginx 
+		 4) sudo service nginx start 
+		 5) sudo service nginx restart
+		 6) hostname -I
+		 7) Configure 404 Erro redirect 
+		 
+		 Open Nginx configuration 
+		 sudo nano /etc/nginx/sites-available/default 
+		 	 
+		 
+		 add this 
+         #try_files $uri $uri/ =404;
+		  try_files $uri $uri/ /tandoorikitchen/index.html;
+		 8) sudo service nginx restart 
+         
+		 
+		 deploy spring boot kubernetes using jenkins
+		 https://www.youtube.com/watch?v=naUhXrV_rRA
+		 https://github.com/javahometech/node-app
+		 
+		 
+		 
 
 	   
 	   
