@@ -1103,6 +1103,17 @@ complete -F __start_kubectl k
 		 https://github.com/javahometech/node-app
 		 
 		 
+		 Unintsall OPenJDK  https://explainjava.com/uninstall-java-ubuntu/ 
+		 OpenJDK
+First of all, take a look at installed OpenJDK packages:
+
+sudo dpkg --list | grep -i jdk
+sudo apt-get remove --purge icedtea-* openjdk-*
+
+
+
+
+		 
 		 
 
 	   
