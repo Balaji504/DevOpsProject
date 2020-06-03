@@ -1111,6 +1111,23 @@ sudo dpkg --list | grep -i jdk
 sudo apt-get remove --purge icedtea-* openjdk-*
 
 
+  nginx stop and apache2 start 
+  sudo service nginx stop
+  sudo apt-get install apache2
+  sudo apache2ctl restart
+  
+  
+    Kubernetes Interview Questions 
+	https://www.edureka.co/blog/interview-questions/kubernetes-interview-questions/ 
+	
+	The company can adopt the concept of containerization.
+	Once they deploy all their application into containers, they can use Kubernetes for orchestration and use container monitoring tools like Prometheus to monitor the actions in containers.
+	
+	
+	
+	
+  
+  
 
 
 		 
