@@ -1123,6 +1123,12 @@ sudo apt-get remove --purge icedtea-* openjdk-*
 	The company can adopt the concept of containerization.
 	Once they deploy all their application into containers, they can use Kubernetes for orchestration and use container monitoring tools like Prometheus to monitor the actions in containers.
 	
+	       Kubernates 
+		   
+		   Ingress :- https://www.youtube.com/watch?v=80Ew_fsV4rM 
+		   
+		   
+		   
 	
 	
 	
